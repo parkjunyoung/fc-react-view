@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom';
 import App from './components/App';
 import Home from './components/Home/Home';
 import Posts from './components/Posts/Posts';
+import Detail from './components/Posts/Detail';
 import Mypage from './components/Mypage/Mypage';
 import { Router, Route, browserHistory, IndexRoute } from 'react-router';
  
@@ -12,6 +13,7 @@ ReactDOM.render(
       <Route path = "/" component = {App}>
          <IndexRoute component = {Home} />
          <Route path = "posts" component = {Posts} />
+         <Route path = "posts/:id" component = {Detail} />
          <Route path = "mypage" component = {Mypage} />
       </Route>
    </Router>
