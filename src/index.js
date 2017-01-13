@@ -7,10 +7,12 @@ import Mypage from './components/Mypage/Mypage';
 import { Router, Route, browserHistory, IndexRoute } from 'react-router';
  
 const rootElement = document.getElementById('root');
-ReactDOM.render(<Router history = {browserHistory}>
+ReactDOM.render(
+    <Router history = {browserHistory}>
       <Route path = "/" component = {App}>
          <IndexRoute component = {Home} />
          <Route path = "posts" component = {Posts} />
          <Route path = "mypage" component = {Mypage} />
       </Route>
-   </Router>, rootElement);
+   </Router>
+, rootElement);
