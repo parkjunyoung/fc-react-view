@@ -17,10 +17,10 @@ class Header extends React.Component {
                 <Navbar.Collapse>
                     <Nav>
                         <LinkContainer to="/posts">
-                            <MenuItem>Posts</MenuItem>
+                            <NavItem>Posts</NavItem>
                         </LinkContainer>
                         <LinkContainer to="/mypage">
-                            <MenuItem>Mypage</MenuItem>
+                            <NavItem>Mypage</NavItem>
                         </LinkContainer>
                         <NavDropdown title="Dropdown" id="basic-nav-dropdown">
                             <MenuItem>Another action</MenuItem>
