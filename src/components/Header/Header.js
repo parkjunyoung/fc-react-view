@@ -1,25 +1,18 @@
 import React from 'react';
-import styles from './Header.css';
+import { Link } from 'react-router';
 
+ 
 class Header extends React.Component {
-
-    constructor(){
-        super();
-        //this를 사용하려면 super로 부모컴포넌트를 불러와야됨
-        this.state = {
-            title : "타이틀입니다.",
-            content : "내용입니다."
-        };
-    }
 
     render(){
         return(
-            <div>
-                <div className={styles.header}>{this.state.title}</div>
-                <div className={styles.content}>{this.state.content}</div>
-            </div>
+            <ul>
+                <li><Link to="/">Home</Link></li>
+                <li><Link to="/posts">posts</Link></li>
+                <li><Link to="/mypage">mypage</Link></li>
+            </ul>
         );  
     }
 }
-
+ 
 export default Header;
