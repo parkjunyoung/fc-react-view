@@ -101,17 +101,15 @@ Answer = connect(mapStateToProps)(Answer);
 
 const App = () => {
     return (
-        <div>
-            <Form />
-            <Answer />
-        </div>
+        <Provider store = {store}>
+            <div>
+                <Form />
+                <Answer />
+            </div>
+        </Provider>
     );
 };
 
 
 const rootElement = document.getElementById('root');
-ReactDOM.render(
-    <Provider store = {store}>
-        <App />
-    </Provider>
-, rootElement);
+ReactDOM.render( <App />, rootElement);
