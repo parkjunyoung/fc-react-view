@@ -6,6 +6,9 @@ import { createStore } from 'redux';
 import { connect, Provider   } from 'react-redux';
 
 
+//update addon 사용시
+import { update } from 'react-addons-update';
+
 /*
  * Action
  */
@@ -29,11 +32,9 @@ function inputReducer(state , action){
     state = { message : "기본값 입니다." };
 
     if(action.message){
-        return Object.assign( 
-                    {}, 
-                    state, 
-                    { message: action.message }
-                );
+        return update(state, {
+                message: { $set: action.message }
+            });
     }else{
         return state;
     }
