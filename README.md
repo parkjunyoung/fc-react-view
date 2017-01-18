@@ -64,3 +64,9 @@ src/components/Header 추가<br />
 └─ webpack.config.js
 
 </pre>
+
+# 1월 18일
+
+## index_redux.js 연습 파일 생성
+
+## modal popup 적용해보기
